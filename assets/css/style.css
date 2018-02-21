@@ -1,0 +1,45 @@
+html,
+body,
+.view {
+    height: 100%;
+}
+
+.view {
+    background: url("http://www.wallpaperup.com/uploads/wallpapers/2014/02/25/275497/big_thumb_a330682df6c4e5d18c817ddacf004795.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+	font-family: 'Kalam', cursive;
+}
+
+p {
+	margin-top: 22px;
+
+}
+.mask {
+	width: auto;
+	height: 150px;
+	margin-left: 20px;
+	padding: 20px;
+}
+
+
+.hostImage {
+	width: 300px;
+	height: 400px;
+}
+
+.instructions{
+	background-color: white;
+	opacity: 0.8;
+	border-radius: 10px;
+}
+
+/*.results {
+	width: 300px;
+	height: 400px;
+}*/
