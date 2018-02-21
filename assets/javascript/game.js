@@ -25,7 +25,7 @@ $(document).ready(function() {
 	function reload(){
 	//computer randomly picks host
 		var host = hostArray[Math.floor(Math.random() * hostArray.length)];
-			console.log(host)
+			console.log("The host is " + host);
 	//display host name in HTML .hostName
 			$("#host-name").html(host);
 			
@@ -35,31 +35,31 @@ $(document).ready(function() {
 		if (host === hostArray[0]) {
 			$(".hostImage").attr("src", "assets/images/minato.png")
 			//diplay host image in HTML .hostImage
-			$(".host-name").text(hostArray[0])
+			$(".host-name").text(hostArray[0]);
 		}
 		//if host name is Kakashi, then image is kakashi1.png
 		if (host === hostArray[1]) {
 			$(".hostImage").attr("src", "assets/images/kakashi1.png")
 			//diplay host image in HTML .hostImage
-			$(".host-name").text(hostArray[1])
+			$(".host-name").text(hostArray[1]);
 		}
 		//if host name is Naruto, then image is naruto1.png
 		if (host === hostArray[2]) {
 			$(".hostImage").attr("src", "assets/images/naruto1.png")
 			//diplay host image in HTML .hostImage
-			$(".host-name").text(hostArray[2])
+			$(".host-name").text(hostArray[2]);
 		}
 		//if host name is Sasuke, then image is sasuke1.png
 		if (host === hostArray[3]) {
 		$(".hostImage").attr("src", "assets/images/sasuke1.png")
 		//diplay host image in HTML .hostImage
-		$(".host-name").text(hostArray[3])
+		$(".host-name").text(hostArray[3]);
 		}
 		//if host name is Sakura, then image is sakura1.png
 		if (host === hostArray[4]) {
 		$(".hostImage").attr("src", "assets/images/sakura1.png")
 		//diplay host image in HTML .hostImage
-		$(".host-name").text(hostArray[4])
+		$(".host-name").text(hostArray[4]);
 		}
 
 
@@ -67,60 +67,62 @@ $(document).ready(function() {
 		var hostNumber = Math.floor(Math.random() *125) + 50;
 		//display hostNumber in HTML.hostNumber
 		$(".hostNumber").text(hostNumber);
-			console.log(hostNumber);
+			console.log(host + "'s Target Number: " + hostNumber);
 
 
-		//randomly assign value to masks, 1 through 12
+		//randomly assign value to masks, 2 through 12
 		maskOneValue = Math.floor(Math.random() *12) + 2;
-			console.log("mask1 value: " + maskOneValue);
+			console.log("maskOne value: " + maskOneValue);
 
 		maskTwoValue = Math.floor(Math.random() *12) + 2;
-			console.log("mask2 value: " + maskTwoValue);
+			console.log("maskTwo value: " + maskTwoValue);
 
 		maskThreeValue = Math.floor(Math.random() *12) + 2;
-			console.log("mask3 value: " + maskThreeValue);
+			console.log("maskThree value: " + maskThreeValue);
 
 		maskFourValue = Math.floor(Math.random() *12) + 2;
-			console.log("mask4 value: " + maskFourValue);
+			console.log("maskFour value: " + maskFourValue);
 
 
 
 		//onclick function to mask1
 		$("#mask1").on("click", function() {
-	  		console.log("mask1 clicked");
+	  		console.log("*****\n maskOne clicked\n*****");
 			
 			//onclick adds value to yourNumber
 			maskOneValue = parseInt(maskOneValue);
-	    		console.log(maskOneValue);
+	    		console.log(maskOneValue + " added to player's total");
 	    	playerTotal += maskOneValue;
 	    		console.log("new player total: " + playerTotal);
 	    	$(".userTotal").text(playerTotal);
 
 			//if yourNumber > hostNumber, then lossCount ++
-	    	if (playerTotal > hostNumber) {
-	    		console.log("You lose!")
-	    	lossCount++;
-	    		console.log(lossCount);
-	    	$(".results").text(lossCount);
-			playerTotal = 0;
+	    	if (playerTotal > hostNumber) {   		
+	    		lossCount++;
+	    			alert("You lose!");
+	    			console.log("You lose!");
+	    			playerTotal = 0;
+	    			
+	    		$(".lossCount").text(lossCount);
+	    			console.log("Losses: " + lossCount);
 	    	
-	    	//reset game
-	    	reload();
-	    	$(".userTotal").text("You Lose!");
-
+	    	//shuffle host
+	    		reload();
+	    		
 	    	}
 
 			//if yourNumber === hostNumber, then winCount ++
 			else if (playerTotal === hostNumber){
 	    		console.log("You Win!")
 	    	winCount++;
-	    		console.log(winCount);
-	    	$(".win").text(winCount);
-			playerTotal = 0;
+	    		alert("You win!");
+	    		console.log("Wins: " + winCount);
+	    		playerTotal = 0;
+
+	    	$(".winCount").text(winCount);
 
 	    	//reset game
 	    	reload();
-	    	$(".userTotal").text("You win!");
 
 	    	}
 		});

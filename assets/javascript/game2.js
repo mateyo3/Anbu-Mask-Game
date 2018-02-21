@@ -27,7 +27,7 @@ $(document).ready(function() {
 // if host name is Minato, then image is minato.png
 	if (host === hostArray[0]) {
 		$(".hostImage").attr("src", "assets/images/minato.png")
-		//diplay host image in HTML .hostImage
+		//display host image in HTML .hostImage
 		$(".host-name").text(hostArray[0])
 	}
 	//if host name is Kakashi, then image is kakashi1.png
@@ -61,7 +61,7 @@ $(document).ready(function() {
 	var hostNumber = Math.floor(Math.random() *125) + 50;
 	//display hostNumber in HTML.hostNumber
 	$(".hostNumber").text(hostNumber);
-		console.log(hostNumber);
+		console.log(host + "'s Number: " + hostNumber);
 
 
 	//randomly assign value to masks, 1 through 12
