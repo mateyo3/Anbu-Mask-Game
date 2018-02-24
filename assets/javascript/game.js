@@ -18,20 +18,20 @@ var hostArray = ["Minato", "Kakashi", "Naruto", "Sasuke", "Sakura"];
 
 $(document).ready(function() {
 
-	$(function(){
-		reload();
-	});
+	//Load game
+	loadGame();
 
-	function reload(){
-	//computer randomly picks host
+
+	function loadGame(){
+		//computer randomly picks host
 		var host = hostArray[Math.floor(Math.random() * hostArray.length)];
 			console.log("The host is " + host);
-	//display host name in HTML .hostName
+			//display host name in HTML .hostName
 			$("#host-name").html(host);
 			
 		// document.querySelector(".hostName").innerHTML = host;
-	// set host name === host image
-	// if host name is Minato, then image is minato.png
+		// set host name === host image
+		// if host name is Minato, then image is minato.png
 		if (host === hostArray[0]) {
 			$(".hostImage").attr("src", "assets/images/minato.png")
 			//diplay host image in HTML .hostImage
@@ -102,12 +102,13 @@ $(document).ready(function() {
 	    			alert("You lose!");
 	    			console.log("You lose!");
 	    			playerTotal = 0;
+	    			$(".userTotal").text(playerTotal);
 	    			
 	    		$(".lossCount").text(lossCount);
 	    			console.log("Losses: " + lossCount);
 	    	
-	    	//shuffle host
-	    		reload();
+	    		//shuffle host
+	    		loadGame();
 	    		
 	    	}
 
@@ -122,7 +123,7 @@ $(document).ready(function() {
 	    	$(".winCount").text(winCount);
 
 	    	//reset game
-	    	reload();
+	    	loadGame();
 
 	    	}
 		});
@@ -130,124 +131,134 @@ $(document).ready(function() {
 
 		//onclick function to mask2
 		$("#mask2").on("click", function() {
-	  			console.log("mask2 clicked");
-	  		
-	  		//onclick adds value to yourNumber
-	    	maskTwoValue = parseInt(maskTwoValue);
-	    		console.log(maskTwoValue);
+	  		console.log("*****\n maskTwo clicked\n*****");
+			
+			//onclick adds value to yourNumber
+			maskTwoValue = parseInt(maskTwoValue);
+	    		console.log(maskTwoValue + " added to player's total");
 	    	playerTotal += maskTwoValue;
 	    		console.log("new player total: " + playerTotal);
 	    	$(".userTotal").text(playerTotal);
 
 			//if yourNumber > hostNumber, then lossCount ++
-	    	if (playerTotal > hostNumber) {
-	    		console.log("You lose!")
-	    	lossCount++;
-	    		console.log(lossCount);
-	    	$(".lossCount").text(lossCount);
-	    	    playerTotal = 0;
+	    	if (playerTotal > hostNumber) {   		
+	    		lossCount++;
+	    			alert("You lose!");
+	    			console.log("You lose!");
+	    			playerTotal = 0;
+	    			$(".userTotal").text(playerTotal);
+	    			
+	    		$(".lossCount").text(lossCount);
+	    			console.log("Losses: " + lossCount);
 	    	
-	    	//reset game
-	    	reload();
-	    	$(".userTotal").empty();
-
+	    		//shuffle host
+	    		loadGame();
+	    		
 	    	}
 
 			//if yourNumber === hostNumber, then winCount ++
 			else if (playerTotal === hostNumber){
 	    		console.log("You Win!")
 	    	winCount++;
-	    		console.log(winCount);
+	    		alert("You win!");
+	    		console.log("Wins: " + winCount);
+	    		playerTotal = 0;
+
 	    	$(".winCount").text(winCount);
 
 	    	//reset game
-	    	reload();
-	    	$(".userTotal").empty();
-	    	playerTotal = 0;
-	    	}
+	    	loadGame();
 
+	    	}
 		});
+
 
 
 		//onclick function to mask3
 		$("#mask3").on("click", function() {
-	  		console.log("mask3 clicked");
-	  		
-	  		//onclick adds value to yourNumber
-	  		maskThreeValue = parseInt(maskThreeValue);
-	    		console.log(maskThreeValue);
+	  		console.log("*****\n maskThree clicked\n*****");
+			
+			//onclick adds value to yourNumber
+			maskThreeValue = parseInt(maskThreeValue);
+	    		console.log(maskThreeValue + " added to player's total");
 	    	playerTotal += maskThreeValue;
 	    		console.log("new player total: " + playerTotal);
 	    	$(".userTotal").text(playerTotal);
 
 			//if yourNumber > hostNumber, then lossCount ++
-	    	if (playerTotal > hostNumber) {
-	    		console.log("You lose!")
-	    	lossCount++;
-	    		console.log(lossCount);
-	    	$(".lossCount").text(lossCount);
-	    	    playerTotal = 0;
+	    	if (playerTotal > hostNumber) {   		
+	    		lossCount++;
+	    			alert("You lose!");
+	    			console.log("You lose!");
+	    			playerTotal = 0;
+	    			$(".userTotal").text(playerTotal);
+	    			
+	    		$(".lossCount").text(lossCount);
+	    			console.log("Losses: " + lossCount);
 	    	
-	    	//reset game
-	    	reload();
-	    	$(".userTotal").empty();
-
+	    		//shuffle host
+	    		loadGame();
+	    		
 	    	}
 
 			//if yourNumber === hostNumber, then winCount ++
 			else if (playerTotal === hostNumber){
 	    		console.log("You Win!")
 	    	winCount++;
-	    		console.log(winCount);
+	    		alert("You win!");
+	    		console.log("Wins: " + winCount);
+	    		playerTotal = 0;
+
 	    	$(".winCount").text(winCount);
 
 	    	//reset game
-	    	reload();
-	    	$(".userTotal").empty();
-	    	playerTotal = 0;
-	    	}
+	    	loadGame();
 
+	    	}
 		});
 
 
 		//onclick function to mask4
 		$("#mask4").on("click", function() {
-	 		 console.log("mask4 clicked");
-	 		
-	 		 //onclick adds value to yourNumber
-	 		 maskFourValue = parseInt(maskFourValue);
-	    		console.log(maskFourValue);
-			playerTotal += maskFourValue;
+	  		console.log("*****\n maskFour clicked\n*****");
+			
+			//onclick adds value to yourNumber
+			maskFourValue = parseInt(maskFourValue);
+	    		console.log(maskFourValue + " added to player's total");
+	    	playerTotal += maskFourValue;
 	    		console.log("new player total: " + playerTotal);
 	    	$(".userTotal").text(playerTotal);
 
 			//if yourNumber > hostNumber, then lossCount ++
-	    	if (playerTotal > hostNumber) {
-	    		console.log("You lose!")
-	    	lossCount++;
-	    		console.log(lossCount);
-	    	$(".lossCount").text(lossCount);
-	    	    playerTotal = 0;
+	    	if (playerTotal > hostNumber) {   		
+	    		lossCount++;
+	    			alert("You lose!");
+	    			console.log("You lose!");
+	    			playerTotal = 0;
+	    			$(".userTotal").text(playerTotal);
+	    			
+	    		$(".lossCount").text(lossCount);
+	    			console.log("Losses: " + lossCount);
 	    	
-	    	//reset game
-	    	reload();
-	    	$(".userTotal").empty();
-
+	    		//shuffle host
+	    		loadGame();
+	    		
 	    	}
 
 			//if yourNumber === hostNumber, then winCount ++
 			else if (playerTotal === hostNumber){
 	    		console.log("You Win!")
 	    	winCount++;
-	    		console.log(winCount);
+	    		alert("You win!");
+	    		console.log("Wins: " + winCount);
+	    		playerTotal = 0;
+
 	    	$(".winCount").text(winCount);
 
 	    	//reset game
-	    	reload();
-	    	$(".userTotal").empty();
-	    	playerTotal = 0;
-	    	}
+	    	loadGame();
 
+	    	}
 		});
 	}
 
