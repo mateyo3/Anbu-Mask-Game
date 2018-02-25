@@ -27,9 +27,6 @@
 	<!-- jQuery CDN -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-	
-	
-
 	<!-- Font Awesome Bootstrap CDN -->
 	<!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/> -->
 
@@ -37,87 +34,59 @@
 	<!--JS CDN -->
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 
-
-
-
 </head>
 <body>
 	<div class = "view full-bg-img flex-center container-fluid">
-		<h1 class="text-center h1-responsive">The Anbu Mask Game</h1>
+	
+	<br>
+	<h1 class="text-center h1-responsive">The Anbu Mask Game</h1>
 
-		<div class="row">
-			<div class="col-xs-4 col-md-4 instructions" id="instructions">
-					<p><strong><span class="host-name">Minato</span></strong> will give you a random number at the start of the game.</p>
+	<div class="row">
+		<div class="col-xs-12 col-md-12 instructions" id="instructions">
+			<p>There are four Anbu masks. By clicking on a mask you will add a specific amount of points to your total score. You win the game by <b><span class="text-danger">matching</span></b> your total score to <b><span class="host-name"></span>'s</b> number, you lose the game if your total score goes <b><span class="text-danger">above</span> <span class="host-name"></span>'s</b> number. The value of each Anbu mask is hidden from you until you click on it. When the game restarts, the game will change the values of each Anbu mask.</p>
+		</div>
+	</div>
 
-					<p>There are four Anbu masks below. By clicking on a mask you will add a specific amount of points to your total score.</p>
+	<div class="row">
 
-					<p>You win the game by <span class="text-danger">matching</span> your total score to the random number, you lose the game if your total score goes <span class="text-danger">above</span> the random number.</p>
-
-					<p>The value of each Anbu mask is hidden from you until you click on it.</p>
-
-					<p>When the game restarts, the game will change the values of each Anbu mask.</p>
-			</div>
-
-			<div class="col-xs-4 col-md-4">
-				<!-- <img src="assets/images/naruto2.png" class="img-responsive results" alt="nine tails"> -->
-			</div>
-			
-			<div class="col-xs-4 col-md-4">
-				<span>
-					<img src="" class="img-responsive hostImage" alt="Host">
-				</span>
-			</div>			
+		<div class="col-xs-4 col-md-4">
+			<span>
+				<img src="" class="img-responsive hostImage" alt="Host">
+			</span>
 		</div>
 		
-
-
-		<div class="row">
-			<div class="col-xs-1 col-md-1 ">
-				<div id="mask1">
-					<img class="mask center-block img-responsive" src="assets/images/anbuKakashi.png" alt="Kakashi">
-				</div>
-			</div>
-			
-			<div class="col-xs-1 col-md-1">
-				<div id="mask2">
-					<img class="mask center-block img-responsive" src="assets/images/anbuMenma.png" alt="Menma">
-				</div>
+		<div class="col-xs-1 col-md-1">
+			<div class="mask-container">
+				<img class="mask center-block img-responsive" src="assets/images/anbuKakashi.png" id="mask1" alt="Kakashi">
 			</div>
 
-			<div class="col-xs-1 col-md-1">
-				<div id="mask3">
-					<img class="mask center-block img-responsive" src="assets/images/anbuRin.png" alt="Rin">
-				</div>
-			</div>
-
-			<div class="col-xs-1 col-md-1">
-				<div id="mask4">
-					<img class="mask center-block img-responsive" src="assets/images/anbuMadara.png" alt="Madara">
-				</div>
-			</div>
-
-			<div class="col-xs-4 col-md-4">
-				<h3 class="text-center">Your number: <span class="userTotal">0</span></h3>
-			</div>
-
-			<div class="col-xs-4 col-md-4">
-				<h3><span class="text-center host-name">Minato</span>'s Number: <span class="hostNumber text-center">??</span></h3>
+			<div class="mask-container">
+				<img class="mask center-block img-responsive" src="assets/images/anbuMenma.png" id="mask2" alt="Menma">
 			</div>
 		</div>
 
-
-		<div class="row">
-			<div class="col-xs-4 col-md-4">
+		<div class="col-xs-1 col-md-1">
+			<div class="mask-container">
+				<img class="mask center-block img-responsive" src="assets/images/anbuRin.png" id="mask3" alt="Rin">
 			</div>
 
-			<div class="col-xs-4 col-md-4">
-				<h3 class="text-center">Wins: <span class="winCount">0</h3></span></h3>
-			</div>
-
-			<div class="col-xs-4 col-md-4">
-				<h3 class="text-align">Losses: <span class="lossCount text-center">0</span></h3>
+			<div class="mask-container">
+				<img class="mask center-block img-responsive" src="assets/images/anbuMadara.png" id="mask4" alt="Madara">
 			</div>
 		</div>
+
+		<div class="col-xs-6 col-md-6">
+			<br>
+			<h3 class="text-center"><span class="host-name">Minato</span>'s Number: <span class="hostNumber text-center">??</span></h3>
+			<br>
+			<h3 class="text-center">Your number: <span class="userTotal">0</span></h3>
+			<br>
+			<h3 class="text-center">Wins: <span class="winCount">0</h3></span></h3>
+			<br>
+			<h3 class="text-center">Losses: <span class="lossCount text-center">0</span></h3>
+
+		</div>
+		<!-- class = "row" -->
 
 	</div>
 	<!-- class = "container-fluid" -->
