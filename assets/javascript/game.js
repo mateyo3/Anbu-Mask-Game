@@ -21,6 +21,9 @@ $(document).ready(function() {
 	//Load game
 	loadGame();
 
+	function refresh() {
+		location.reload();
+	}
 
 	function loadGame(){
 		//computer randomly picks host
@@ -107,7 +110,7 @@ $(document).ready(function() {
 	    		$(".lossCount").text(lossCount);
 	    			console.log("Losses: " + lossCount);
 	    	
-	    		//shuffle host
+	    		//reshuffle
 	    		loadGame();
 	    		
 	    	}
@@ -122,7 +125,7 @@ $(document).ready(function() {
 
 	    	$(".winCount").text(winCount);
 
-	    	//reset game
+	    	//reshuffle
 	    	loadGame();
 
 	    	}

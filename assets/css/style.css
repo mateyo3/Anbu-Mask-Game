@@ -22,9 +22,8 @@ p {
 }
 .mask {
 	width: auto;
-	height: 150px;
-	margin-left: 20px;
-	padding: 20px;
+	height: 200px;
+	padding: 30px;
 }
 
 
@@ -37,6 +36,13 @@ p {
 	background-color: white;
 	opacity: 0.8;
 	border-radius: 10px;
+}
+
+.btn {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	text-align: center;
 }
 
 /*.results {
