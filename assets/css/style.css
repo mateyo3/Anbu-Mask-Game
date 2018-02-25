@@ -5,7 +5,7 @@ body,
 }
 
 .view {
-    background: url(https://github.com/mateyo3/Anbu-Mask-Game/blob/master/assets/images/sky.jpg?raw=true);
+/*    background: url(https://github.com/mateyo3/Anbu-Mask-Game/blob/master/assets/images/sky.jpg?raw=true);*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -32,10 +32,14 @@ p {
 	height: 400px;
 }
 
-.instructions{
+.instructions {
 	background-color: white;
 	opacity: 0.8;
 	border-radius: 10px;
+}
+
+.text-back-drop {
+	margin: 10px;
 }
 
 .btn {
