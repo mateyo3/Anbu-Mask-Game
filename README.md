@@ -9,24 +9,22 @@ Each Anbu mask is randomly assigned a value from 2-12. The user clicks on each m
 
 If the user matches the host's number, then the wins total increases by one. If the user's total is greater than the host's number the loss total increases by one.
 
-
 ## Getting Started
 
 ### Cloning
-Click the Clone or download button to copy the URL
+Click the `Clone or download` button to copy the URL
 
 ### In the Terminal:
-Navigate into a directory `cd [folder name}`
-Clone repository into the directory `git clone [paste URL]`
-List the items in your directory `ls`
+1. Navigate into a directory `cd [folder name]`
+2. Clone repository into the directory `git clone [paste URL]`
+3. List the items in your directory `ls`
 
 ## Built With
 HTML, CSS, Bootstrap. Javascript, JQuery
 
-## Author
-Mateo Reyes
-
-## Artwork by Marinha
+## Developer
+- Mateo Reyes
+- Artwork by Marinha
 
 ## License
 © 2017 Mateo Reyes
