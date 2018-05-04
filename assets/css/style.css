@@ -18,14 +18,13 @@ h1 {
 
 p {
 	margin-top: 22px;
-
 }
+
 .mask {
 	width: auto;
 	height: 200px;
-	padding: 30px;
+	padding: 0px;
 }
-
 
 .hostImage {
 	width: 300px;

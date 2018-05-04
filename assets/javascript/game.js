@@ -102,8 +102,8 @@ $(document).ready(function() {
 			//if yourNumber > hostNumber, then lossCount ++
 	    	if (playerTotal > hostNumber) {   		
 	    		lossCount++;
-	    			alert("You lose!");
-	    			console.log("You lose!");
+	    			alert(playerTotal + " is too high. " + "You lose!");
+	    			console.log(playerTotal + " is too high. " + "You lose!");
 	    			playerTotal = 0;
 	    			$(".userTotal").text(playerTotal);
 	    			
@@ -111,22 +111,22 @@ $(document).ready(function() {
 	    			console.log("Losses: " + lossCount);
 	    	
 	    		//reshuffle
-	    		loadGame();
+	    		refresh();
 	    		
 	    	}
 
 			//if yourNumber === hostNumber, then winCount ++
 			else if (playerTotal === hostNumber){
-	    		console.log("You Win!")
+	    		console.log(playerTotal + " is a match! You win!")
 	    	winCount++;
-	    		alert("You win!");
+	    		alert(playerTotal + " is a match! You win!");
 	    		console.log("Wins: " + winCount);
 	    		playerTotal = 0;
 
 	    	$(".winCount").text(winCount);
 
 	    	//reshuffle
-	    	loadGame();
+	    	refresh();
 
 	    	}
 		});
@@ -146,8 +146,8 @@ $(document).ready(function() {
 			//if yourNumber > hostNumber, then lossCount ++
 	    	if (playerTotal > hostNumber) {   		
 	    		lossCount++;
-	    			alert("You lose!");
-	    			console.log("You lose!");
+	    			alert(playerTotal + " is too high. " + "You lose!");
+	    			console.log(playerTotal + " is too high. " + "You lose!");
 	    			playerTotal = 0;
 	    			$(".userTotal").text(playerTotal);
 	    			
@@ -155,22 +155,22 @@ $(document).ready(function() {
 	    			console.log("Losses: " + lossCount);
 	    	
 	    		//shuffle host
-	    		loadGame();
+	    		refresh();
 	    		
 	    	}
 
 			//if yourNumber === hostNumber, then winCount ++
 			else if (playerTotal === hostNumber){
-	    		console.log("You Win!")
+	    		console.log(playerTotal + " is a match! You win!")
 	    	winCount++;
-	    		alert("You win!");
+	    		alert(playerTotal + " is a match! You win!");
 	    		console.log("Wins: " + winCount);
 	    		playerTotal = 0;
 
 	    	$(".winCount").text(winCount);
 
 	    	//reset game
-	    	loadGame();
+	    	refresh();
 
 	    	}
 		});
@@ -191,8 +191,8 @@ $(document).ready(function() {
 			//if yourNumber > hostNumber, then lossCount ++
 	    	if (playerTotal > hostNumber) {   		
 	    		lossCount++;
-	    			alert("You lose!");
-	    			console.log("You lose!");
+	    			alert(playerTotal + " is too high. " + "You lose!");
+	    			console.log(playerTotal + " is too high. " + "You lose!");
 	    			playerTotal = 0;
 	    			$(".userTotal").text(playerTotal);
 	    			
@@ -200,22 +200,22 @@ $(document).ready(function() {
 	    			console.log("Losses: " + lossCount);
 	    	
 	    		//shuffle host
-	    		loadGame();
+	    		refresh();
 	    		
 	    	}
 
 			//if yourNumber === hostNumber, then winCount ++
 			else if (playerTotal === hostNumber){
-	    		console.log("You Win!")
+	    		console.log(playerTotal + " is a match! You win!")
 	    	winCount++;
-	    		alert("You win!");
+	    		alert(playerTotal + " is a match! You win!");
 	    		console.log("Wins: " + winCount);
 	    		playerTotal = 0;
 
 	    	$(".winCount").text(winCount);
 
 	    	//reset game
-	    	loadGame();
+	    	refresh();
 
 	    	}
 		});
@@ -235,8 +235,8 @@ $(document).ready(function() {
 			//if yourNumber > hostNumber, then lossCount ++
 	    	if (playerTotal > hostNumber) {   		
 	    		lossCount++;
-	    			alert("You lose!");
-	    			console.log("You lose!");
+	    			alert(playerTotal + " is too high. " + "You lose!");
+	    			console.log(playerTotal + " is too high. " + "You lose!");
 	    			playerTotal = 0;
 	    			$(".userTotal").text(playerTotal);
 	    			
@@ -244,22 +244,22 @@ $(document).ready(function() {
 	    			console.log("Losses: " + lossCount);
 	    	
 	    		//shuffle host
-	    		loadGame();
+	    		refresh();
 	    		
 	    	}
 
 			//if yourNumber === hostNumber, then winCount ++
 			else if (playerTotal === hostNumber){
-	    		console.log("You Win!")
+	    		console.log(playerTotal + " is a match! You win!")
 	    	winCount++;
-	    		alert("You win!");
+	    		alert(playerTotal + " is a match! You win!");
 	    		console.log("Wins: " + winCount);
 	    		playerTotal = 0;
 
 	    	$(".winCount").text(winCount);
 
 	    	//reset game
-	    	loadGame();
+	    	refresh();
 
 	    	}
 		});
