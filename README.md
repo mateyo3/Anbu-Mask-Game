@@ -22,6 +22,10 @@ Click the `Clone or download` button to copy the URL
 ## Built With
 HTML, CSS, Bootstrap. Javascript, JQuery
 
+## Future developments
+1. Create win and loss count
+2. Keep high scores
+
 ## Developer
 - Mateo Reyes
 - Artwork by Marinha
